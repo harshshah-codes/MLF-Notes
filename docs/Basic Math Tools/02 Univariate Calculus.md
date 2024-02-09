@@ -33,7 +33,7 @@ $$
 f'(x^*) = lim_{x\to x^*}\cfrac{f(x)-f(x^*)}{x-x^*}\\ \ \\
 \text{Let } f'(x^*) \approx \cfrac{f(x)-f(x^*)}{x-x^*}\text{  (Around } x=x*)\\\ \\
 f(x) \approx f(x^*)+f'(x*)(x-x^*)
-$$.
+$$
 
 Now $f(x^*)+f'(x*)(x-x^*)$ is known as linear approximation $L_{x^*}[f](x)$ of $x$ around $x=x^*$.
 
@@ -54,11 +54,12 @@ Graph of $ L_{x^*}[f]$, i.e. $G_{ L_{x^*}[f]}$ is a tangent to the graph of $f$,
 Let $f(x) = g(x).h(x)$ and $x^*=0$. We need to find $f'(x)$.
 
 Now, using linear approximation and approximating $g(x)$ and $f(x)$ **seprately**.
-$$
 
+$$
 f(x) \approx (g(0) + xg'(0))(h(0) + xh'(0))\\ \ \\
 f(x) \approx g(0)h(0) + x[g'(0)h(0)+h'(0)g(0)]+x^2g'(0)h'(0) \dots (1)\\ \ \\ \ \\
-\text{ We know that }, L_{x^{*}}[f](0) = f(0) + xf'(0)\dots(2)$$
+\text{ We know that }, L_{x^{*}}[f](0) = f(0) + xf'(0)\dots(2)
+$$
 
 Comparing $(1)$ with $(2)$ we get $f'(0) = g'(0)h(0) + g(0)h'(0)$
 
