@@ -32,7 +32,8 @@ Then the derivate of the function $f$ at $x^*$ is defined as
 $$
 f'(x^*) = lim_{x\to x^*}\cfrac{f(x)-f(x^*)}{x-x^*}\\ \ \\
 \text{Let } f'(x^*) \approx \cfrac{f(x)-f(x^*)}{x-x^*}\text{  (Around } x=x*)\\\ \\
-f(x) \approx f(x^*)+f'(x*)(x-x^*)$$.
+f(x) \approx f(x^*)+f'(x*)(x-x^*)
+$$.
 
 Now $f(x^*)+f'(x*)(x-x^*)$ is known as linear approximation $L_{x^*}[f](x)$ of $x$ around $x=x^*$.
 
