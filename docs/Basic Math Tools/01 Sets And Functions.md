@@ -74,7 +74,7 @@ Let there be two sets $A$ and $B$. Then, the De-Morgan's Law states that,
 
 An **ordered collection** of elements is known as a **sequence**.
 
-Let there be a sequence where the elements are $x_1,x_2,...$, where $x_i\in\R^d$. And, if $lim_{i\to\infin} x^i = x*$ then, $\forall\text{  } \epsilon>0, \exists \text{ a }N, \text{ such that } x_n\in B(x*, \epsilon)\ \forall\ n\geq N$
+Let there be a sequence where the elements are $x_1,x_2,...$, where $x_i\in\R^d$. And, if $lim_{i\to\infin} x^i = x^*$ then, $\forall\text{  } \epsilon>0, \exists \text{ a }N, \text{ such that } x_n\in B(x^*, \epsilon)\ \forall\ n\geq N$
 
 ### Vector Spaces
 
