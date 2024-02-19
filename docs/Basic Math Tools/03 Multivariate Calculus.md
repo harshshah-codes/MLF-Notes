@@ -39,7 +39,7 @@ Let $f:\R^d\to\R$ be defined.
 
 Then $\cfrac{\partial f}{\partial x} = \begin{bmatrix}\cfrac{\partial f}{\partial x_1},\cfrac{\partial f}{\partial x_2}, \cfrac{\partial f}{\partial x_3}, \cfrac{\partial f}{\partial x_4}, \cfrac{\partial f}{\partial x_5}, \dots, \cfrac{\partial f}{\partial x_d}, \end{bmatrix}$
 
-Hence the gradient is equal to $[\cfrac{\partial f}{\partial x}]^T$, i.e.,
+Hence the gradient is equal to $[\cfrac{\partial f}{\partial x}]^T$ , i.e.,
 $$
 \cfrac{\triangledown f}{\triangledown x} = \begin{bmatrix}
 \cfrac{\partial f}{\partial x_1}\\\ \\
@@ -70,7 +70,9 @@ $$
 $$
 
 #### Proof
+
 $$
+
 \{x\in\R^d:f(x)=f(v)\}\newline
 \ \newline
 \rightarrow\{x\in\R^d:L_v[f](x)=f(v)\}\newline
