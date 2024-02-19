@@ -9,15 +9,15 @@ Let a function $f$ be defined as $f:\R^d\to\R$. This will be used to refernce ea
 
 ## Hyper Plane
 - A hyperplane of $d-1$ dimensions $\subseteq R^d$.
-- A hyperplane perpendicular to a vector $w\in\R^d$ with a value $b\in\R$ is given by $\{x\in\R^d:w^Tx=b\} = \{x\in\R^d:\sum_{i=1}^dw_ix_i=b\} $ 
+- A hyperplane perpendicular to a vector $w\in\R^d$ with a value $b\in\R$ is given by $\{x\in\R^d:w^Tx=b\} = \{x\in\R^d:\sum_{i=1}^dw_ix_i=b\}$ 
 
 ## Partial Derivatives
 The partial derivative of $f$ is defined as the derivative of $f$ with respect to one of the variables, keeping the other variables constant, i.e.,
 
 $$
 \cfrac{\partial f}{\partial x_i}(v) = lim_{\alpha\to{0}}\cfrac{f(v+\alpha e_i)-f(v)}{\alpha}
-$$.
-Here $e_i$ is the $i^{th}$ unit vector in $\R^d$.
+$$
+Here $e_i$ is the $i^{th}$ unit vector in $\R^d$
 
 Let $f:\R^d\to\R$ and $f=1x_1+2x_2+\dots nx_n$
 
@@ -48,3 +48,15 @@ $$
 \cfrac{\partial f}{\partial x_n}
 \end{bmatrix}
 $$
+
+## Linear Approximations and Gradients
+Let $f$ be a function defined from $\R^d\to\R$
+
+Then the linear approximation of $f$ at a vector $v\in\R^d$ is given by, 
+
+$$
+L_v[f](x)= f(x) = f(v) + \triangledown f(v)^T(x-v)
+$$
+
+## Gradients and Tangent Planes
+The graph of $L_v[f]$ is 
