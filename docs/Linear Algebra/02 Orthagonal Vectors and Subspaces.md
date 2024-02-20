@@ -28,3 +28,34 @@ $$
 Let $U, V$ be vector subspaces.
 
 $U,V$ are vector subspaces if $u^Tv=v^Tu=0$, where, $v\in V,u\in U$
+
+## Orthogonal Subspaces and Fundamental Subspaces
+
+### $R(A)\perp N(A)$
+Let $x\in N(A)$, i.e., $Ax=0$ which is equal to
+$$
+\begin{bmatrix}
+|\ \ \ \ \  | \ \ \ \ \ \ \  |\\
+\text{row 1}\ \text{row 2}\ \text{row 3}\\
+|\ \ \ \ \  | \ \ \ \ \ \ \  |\\
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\ x_2\\ x_3
+\end{bmatrix}=
+\begin{bmatrix}
+0 \\ 0\\ 0
+\end{bmatrix}
+$$
+
+The above equation implies $\text{(row 1)}\perp x_1, \text{(row 2)}\perp x_2, ...$ and so on.
+
+Thus for any $x$, $\alpha_1r_1+\alpha_2r_2+...\alpha_nr_n\perp x,$ where $r_i$ is a $i^{th}$ row of the matrix.
+
+So $R(A)\perp N(A)\implies C(A^T)\perp N(A)$
+
+### $C(A)\perp N(A^T)$
+> Try it yourself.
+
+!!! tip
+
+    Follow the previous proof with the Column Space and Left Null space.
