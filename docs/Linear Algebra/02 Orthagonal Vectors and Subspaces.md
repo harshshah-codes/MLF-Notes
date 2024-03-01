@@ -35,9 +35,7 @@ $U,V$ are vector subspaces if $u^Tv=v^Tu=0$, where, $v\in V,u\in U$
 Let $x\in N(A)$, i.e., $Ax=0$ which is equal to
 $$
 \begin{bmatrix}
-|\ \ \ \ \  | \ \ \ \ \ \ \  |\\
 \text{row 1}\ \text{row 2}\ \text{row 3}\\
-|\ \ \ \ \  | \ \ \ \ \ \ \  |\\
 \end{bmatrix}
 \begin{bmatrix}
 x_1\\ x_2\\ x_3

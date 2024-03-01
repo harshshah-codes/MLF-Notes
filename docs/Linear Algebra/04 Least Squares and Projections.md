@@ -14,3 +14,11 @@ $$
 \\\ \\\rightarrow 2[2(b_1-\cfrac{dx_1}{dx})+2(b_2-\cfrac{dx_2}{dx})+...+2(b_n-\cfrac{dx_n}{dx})] = 0
 \\\ \\\rightarrow \text{On solving, this looks similar to, }\cfrac{a^Tb}{a^Ta}
 $$
+
+!!! note
+
+    Taking derivative and finding the **minima** actually turns out to be the same as peforming [*a projection* on a subspace](./03%20Projections.md/#projection-onto-a-subspace). Solving $A^TA\hat{x}=A^Tb$ leads to an $\hat{x}$ that minimises $||Ax-b||^2$
+
+
+
+
