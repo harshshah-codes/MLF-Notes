@@ -10,3 +10,8 @@ h6 {
   font-weight: 600;
   font-family: "Space Grotesk";
 }
+
+@font-face {
+  font-family: 'Operator Mono-Book';
+  src: url('https://raw.githubusercontent.com/keyding/Operator-Mono/blob/master/Fonts/OperatorMono-Book.otf');
+}
