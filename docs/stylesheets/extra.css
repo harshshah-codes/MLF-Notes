@@ -16,8 +16,13 @@ h6 {
   src: url('https://raw.githubusercontent.com/keyding/Operator-Mono/blob/master/Fonts/OperatorMono-Book.otf');
 }
 
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+}
+
 :root {
-  --md-text-font: "Operator Mono Book"; 
+  --md-text-font: "Source Sans Pro";
 }
 
 :root {
