@@ -12,14 +12,14 @@ h6 {
 }
 
 @font-face {
-  font-family: 'Operator Mono-Book';
+  font-family: 'Operator Mono Book';
   src: url('https://raw.githubusercontent.com/keyding/Operator-Mono/blob/master/Fonts/OperatorMono-Book.otf');
 }
 
 :root {
-  --md-text-font: "Operator Mono-Book"; 
+  --md-text-font: "Operator Mono Book"; 
 }
 
 :root {
-  --md-code-font: "Operator Mono-Book"; 
+  --md-code-font: "Operator Mono Book"; 
 }
