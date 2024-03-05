@@ -34,3 +34,13 @@ $\to (A^TA)\theta=A^TY$
 
 !!! tip 
     The application of $\theta$ is in finding the Maximum Likelihood Probability.
+
+## Ridge Regression (Regularised version of Linear Regrssion)
+Instead of solving the **loss function** $L(\theta)=\sum_{i=1}^{n}(x^T_i\theta-y_i)^2,$ we solve the following regularised version:
+
+$\bar{L}(\theta)=\sum_{i=1}^{n}(x^T_i\theta-y_i)^2+\lambda||\theta||^2,$ where $\lambda||\theta||^2$ is the **regularization term** and then minimise it.
+
+Now, if you minimise this using the above calculations, we get $(A^TA+\lambda I)\theta_{reg}=A^TY\to\theta=(A^TA+\lambda I)^{-1}A^TY$
+
+!!! note
+    $(A^TA+\lambda I) $ is invertible even if $A$ is not of full rank
