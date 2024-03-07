@@ -40,7 +40,8 @@ The values of $v$ thus obtained are the **eigen vectors** to your matrix $A$ cor
 2. The product of the **eigen values** is equal to the *determinant* of the matrix $A,$ i.e., $\prod\lambda=det(A).$
 3. A quick and easy way to find out the eigen values is by using the first two properties.
 4. Symmetric matrices have **real** eigenvalues.
-5. There may be some matrices for which there may be repeated **eigen values**. 
+5. There may be some matrices for which there may be repeated **eigen values**.
+6. **Power law**: For a matrix $A$ if there eigenvalues are $\{\lambda_1,\lambda_2,...,\lambda_n\},$ then for $A^k$ the eigenvalues will be $\{\lambda_1^k, \lambda_2^k,...\lambda_n^k\}$ 
 
 ## Importance of Eigen Values and Eigen Vectors
 If $x$ is an **eigen vector**, then $A$ either ***extends it or shrinks it*** by the scale of $\lambda$
