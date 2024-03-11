@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap");
+
+.md-header__title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  font-family: "Space Grotesk";
+}
+
+@font-face {
+  font-family: 'Operator Mono Book';
+  src: url('https://raw.githubusercontent.com/keyding/Operator-Mono/blob/master/Fonts/OperatorMono-Book.otf');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+}
+
+:root {
+  --md-text-font: "Source Sans Pro";
+}
+
+:root {
+  --md-code-font: "Operator Mono Book"; 
+}

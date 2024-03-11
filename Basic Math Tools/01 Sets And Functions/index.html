@@ -1,0 +1,1369 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../TODO/">
+      
+      
+        <link rel="next" href="../02%20Univariate%20Calculus/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>Sets and Functions - MLF Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CSpace+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Space Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sets-and-functions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MLF Notes" class="md-header__button md-logo" aria-label="MLF Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MLF Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sets and Functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MLF Notes" class="md-nav__button md-logo" aria-label="MLF Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    MLF Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLF Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02%20Supervised%20Learning%20-%20MLF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Supervised Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03%20Unsupervised%20Learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unsupervised Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TODO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TODO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basic Math Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Basic Math Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sets and Functions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Sets and Functions
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#some-important-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Some important symbols
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#some-basic-sets-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Some basic sets to remember
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metric-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metric Spaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metric Spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#open-ball-in-metric-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open ball in Metric Space
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closed-ball-in-metric-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closed ball in Metric Space
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#union-cup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Union (\(\cup\))
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intersection-cap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intersection (\(\cap\))
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complement-sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complement (\(S^{c}\))
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(A-B\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-morgans-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      De Morgan's Law
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vector Spaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vector Spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dot-product-of-two-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dot Product of two vectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#norm-of-a-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Norm of a vector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orthognal-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orthognal Vectors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-and-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions And Graphs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions And Graphs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#d-dimensional-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(d\)-dimensional functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-of-a-function-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph of a function \(f\)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02%20Univariate%20Calculus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Univariate Calculus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03%20Multivariate%20Calculus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multivariate Calculus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04%20Complex%20Numbers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Complex Numbers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linear Algebra
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Linear Algebra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/01%20Four%20fundamental%20Subspaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Four Fundamental Subspaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/02%20Orthagonal%20Vectors%20and%20Subspaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Orthogonal Vectors and Subspaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/03%20Projections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projections of Vectors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/04%20Least%20Squares%20and%20Projections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Least Squares and Projections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/05%20Linear%20regression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linear Regression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/06%20Polynomial%20Regression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Polynomial Regression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/07%20EigenValues%20and%20EigenVectors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eigen Values and Eigen Vectors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/08%20Diagonalisation%20of%20a%20matrix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagnolization of a matrix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/09%20Orthogonally%20Diagnolisable%20matrix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Orthogonally Diagnolizable matrix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/10%20Complex%20Matrices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Complex Matrices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#some-important-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Some important symbols
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#some-basic-sets-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Some basic sets to remember
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metric-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metric Spaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metric Spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#open-ball-in-metric-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open ball in Metric Space
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closed-ball-in-metric-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closed ball in Metric Space
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#union-cup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Union (\(\cup\))
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intersection-cap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intersection (\(\cap\))
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complement-sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complement (\(S^{c}\))
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(A-B\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-morgans-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      De Morgan's Law
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vector Spaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vector Spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dot-product-of-two-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dot Product of two vectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#norm-of-a-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Norm of a vector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orthognal-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orthognal Vectors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-and-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions And Graphs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions And Graphs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#d-dimensional-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(d\)-dimensional functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-of-a-function-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph of a function \(f\)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="sets-and-functions">Sets and Functions</h1>
+<h2 id="some-important-symbols">Some important symbols</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Symbol</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\implies\)</span></td>
+<td>Implies</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\forall\)</span></td>
+<td>For All</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\exists\)</span></td>
+<td>There exists</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\Leftrightarrow\)</span></td>
+<td>Equivalence</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sets">Sets</h2>
+<h3 id="some-basic-sets-to-remember">Some basic sets to remember</h3>
+<ul>
+<li>$\R \to $ Set of Real Numbers</li>
+<li>$\R_+ \to $ Set of Positive Real numbers (including <span class="arithmatex">\(0\)</span>)</li>
+<li><span class="arithmatex">\(\Z \to\)</span> Set of all integers</li>
+<li><span class="arithmatex">\(\Z_+ \to\)</span> Set of positive integers including <span class="arithmatex">\(0\)</span></li>
+<li><span class="arithmatex">\([a,b] \to \{x\in\R\ |\ a\leq x\leq b\}\)</span></li>
+<li><span class="arithmatex">\((a,b) \to \{x\in\R\ |\ a&lt; x&lt; b\}\)</span></li>
+<li>$\R^d \to $  Set of <span class="arithmatex">\(d\)</span>-dimensional vectors</li>
+<li><span class="arithmatex">\([a,b]^d \to \{x\in\R^d:x_i\in[a,b], i\in\{1,2,3,\dots d\}\}\)</span></li>
+</ul>
+<h3 id="metric-spaces">Metric Spaces</h3>
+<p><strong>Metric spaces</strong> are basically vectors with some <strong>Distance function <span class="arithmatex">\(D\)</span></strong> associated with them.</p>
+<p>For most of question throughout the course the default metric space used is <span class="arithmatex">\(\R^d\)</span> where <span class="arithmatex">\(D=\sqrt{(x_1-y_1)^2+(x_2-y_2)^2+\dots(x_d-y_d)^2}\)</span>,</p>
+<h4 id="open-ball-in-metric-space">Open ball in Metric Space</h4>
+<p>Let <span class="arithmatex">\(x\in\R^d\)</span>. Then, the open ball is given by <span class="arithmatex">\(B(x,\epsilon)=\{y\in\R^d: D(x,y)&lt;\epsilon\}\)</span></p>
+<h4 id="closed-ball-in-metric-space">Closed ball in Metric Space</h4>
+<p>Let <span class="arithmatex">\(x\in\R^d\)</span>. Then, the closed ball is given by <span class="arithmatex">\(B(x,\epsilon)=\{y\in\R^d: D(x,y)\leq\epsilon\}\)</span></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you include the boundary, it is a <strong>closed ball</strong>, else an <strong>open ball</strong>.</p>
+</div>
+<p>Some basic operations defined on sets are</p>
+<ul>
+<li>Union (<span class="arithmatex">\(\cup\)</span>)</li>
+<li>Intersection (<span class="arithmatex">\(\cap\)</span>)</li>
+<li>Complement (<span class="arithmatex">\(S^{c}\)</span>)</li>
+<li><span class="arithmatex">\(A-B\)</span></li>
+</ul>
+<h4 id="union-cup">Union (<span class="arithmatex">\(\cup\)</span>)</h4>
+<p>The union of two sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> is the set of elements which are in <span class="arithmatex">\(A\)</span>, as well as in <span class="arithmatex">\(B\)</span> or in both.</p>
+<h4 id="intersection-cap">Intersection (<span class="arithmatex">\(\cap\)</span>)</h4>
+<p>The intersection of two sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> is the set of elements which are in both <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>.</p>
+<h4 id="complement-sc">Complement (<span class="arithmatex">\(S^{c}\)</span>)</h4>
+<p>The complement of a set <span class="arithmatex">\(S\)</span> is the set of all elements which are in the universal set but not in <span class="arithmatex">\(S\)</span>.</p>
+<h4 id="a-b"><span class="arithmatex">\(A-B\)</span></h4>
+<p>This contains all the elements of <span class="arithmatex">\(A\)</span> that are not in <span class="arithmatex">\(B\)</span>.</p>
+<h4 id="de-morgans-law">De Morgan's Law</h4>
+<p>Let there be two sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>. Then, the De-Morgan's Law states that,</p>
+<ul>
+<li><span class="arithmatex">\((A\cup B)^{c}=A^c\cap B^c\)</span></li>
+<li><span class="arithmatex">\((A\cap B)^{c}=A^c\cup B^c\)</span></li>
+</ul>
+<h3 id="sequences">Sequences</h3>
+<p>An <strong>ordered collection</strong> of elements is known as a <strong>sequence</strong>.</p>
+<p>Let there be a sequence where the elements are <span class="arithmatex">\(x_1,x_2,...\)</span>, where <span class="arithmatex">\(x_i\in\R^d\)</span>. And, if <span class="arithmatex">\(lim_{i\to\infin} x^i = x^*\)</span> then, <span class="arithmatex">\(\forall\text{  } \epsilon&gt;0, \exists \text{ a }N, \text{ such that } x_n\in B(x^*, \epsilon)\ \forall\ n\geq N\)</span></p>
+<h3 id="vector-spaces">Vector Spaces</h3>
+<p>A <strong>vector space</strong> is a set of elements called <strong>vectors</strong>, having operations of addition and scalar multiplication defined on it.</p>
+<p>A vector space must satisfy the following properties:</p>
+<ul>
+<li><strong>Additive Closure</strong>: If the vector space is <span class="arithmatex">\(V\)</span> and <span class="arithmatex">\(v_1,v_2\in V\)</span>, then
+<span class="arithmatex">\(c_1v_1 + c_2v_2\in V\)</span>, where <span class="arithmatex">\(c_1,c_2\in \R\)</span></li>
+</ul>
+<!-- TODO -->
+<ul>
+<li><strong>Multiplative Closure</strong></li>
+</ul>
+<h4 id="dot-product-of-two-vectors">Dot Product of two vectors</h4>
+<p>Let <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> be two vectors such that <span class="arithmatex">\(x,y\in\R^d\)</span>.
+Then, <span class="arithmatex">\(x.y=x^Ty=\sum_{i=1}^dx_i.y_i\)</span></p>
+<h4 id="norm-of-a-vector">Norm of a vector</h4>
+<p>Let <span class="arithmatex">\(x\)</span> be a vector such that <span class="arithmatex">\(x\in\R^d\)</span>.
+Then, the norm of the vector is given by <span class="arithmatex">\(||x||=\sqrt{x^Tx}=\sqrt{\sum_{i=1}^dx_i^2}\)</span></p>
+<h4 id="orthognal-vectors">Orthognal Vectors</h4>
+<p>Let <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> be two vectors such that <span class="arithmatex">\(x,y\in\R^d\)</span>.
+Then, <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> are orthogonal if <span class="arithmatex">\(x.y=0\)</span>, i.e., <span class="arithmatex">\(x^Ty=0\)</span></p>
+<h2 id="functions-and-graphs">Functions And Graphs</h2>
+<p>Let <span class="arithmatex">\(f\)</span> be a function with domain <span class="arithmatex">\(A\)</span> and co-domain <span class="arithmatex">\(B\)</span>. Then, the function is denoted as <span class="arithmatex">\(f:A\to B\)</span>.</p>
+<h3 id="d-dimensional-functions"><span class="arithmatex">\(d\)</span>-dimensional functions</h3>
+<p>A function with domain <span class="arithmatex">\(\R^d\)</span> to <span class="arithmatex">\(\R\)</span> is known as a <span class="arithmatex">\(d\)</span>-dimensional function or multivariate function.</p>
+<p>It is denoted as <span class="arithmatex">\(f:\R^d\to\R\)</span></p>
+<h3 id="graph-of-a-function-f">Graph of a function <span class="arithmatex">\(f\)</span></h3>
+<p>The graph of a <span class="arithmatex">\(d\)</span>-dimensional function is defined as <span class="arithmatex">\(G_f \subseteq \R^{d+1}\)</span>.</p>
+<div class="arithmatex">\[
+G_f=\{(x, f(x)): x\in\R^d\}
+\]</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../TODO/" class="md-footer__link md-footer__link--prev" aria-label="Previous: TODO">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                TODO
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../02%20Univariate%20Calculus/" class="md-footer__link md-footer__link--next" aria-label="Next: Univariate Calculus">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Univariate Calculus
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "content.code.copy", "content.code.select", "navigation.footer", "navigation.path"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

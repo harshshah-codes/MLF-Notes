@@ -1,0 +1,1232 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../02%20Univariate%20Calculus/">
+      
+      
+        <link rel="next" href="../04%20Complex%20Numbers/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>Multivariate Calculus - MLF Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CSpace+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Space Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#multivariate-calculus" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MLF Notes" class="md-header__button md-logo" aria-label="MLF Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MLF Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Multivariate Calculus
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MLF Notes" class="md-nav__button md-logo" aria-label="MLF Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    MLF Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLF Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02%20Supervised%20Learning%20-%20MLF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Supervised Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03%20Unsupervised%20Learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unsupervised Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TODO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TODO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basic Math Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Basic Math Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01%20Sets%20And%20Functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sets and Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02%20Univariate%20Calculus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Univariate Calculus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Multivariate Calculus
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Multivariate Calculus
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hyper-plane" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hyper Plane
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partial-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partial Derivatives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gradients" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradients
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gradients">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linear-approximations-and-gradients" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linear Approximations and Gradients
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gradients-and-tangent-planes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradients and Tangent Planes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gradients-and-contours" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradients and Contours
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gradients and Contours">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proof
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directional-derivative" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directional Derivative
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cauchy-schwarz-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cauchy-Schwarz Inequality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cauchy-Schwarz Inequality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#points-to-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Points to Note
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#direction-of-steepest-ascent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Direction of steepest ascent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#direction-of-steepest-descent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Direction of steepest descent
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04%20Complex%20Numbers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Complex Numbers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linear Algebra
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Linear Algebra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/01%20Four%20fundamental%20Subspaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Four Fundamental Subspaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/02%20Orthagonal%20Vectors%20and%20Subspaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Orthogonal Vectors and Subspaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/03%20Projections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projections of Vectors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/04%20Least%20Squares%20and%20Projections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Least Squares and Projections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/05%20Linear%20regression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linear Regression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/06%20Polynomial%20Regression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Polynomial Regression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/07%20EigenValues%20and%20EigenVectors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eigen Values and Eigen Vectors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/08%20Diagonalisation%20of%20a%20matrix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagnolization of a matrix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/09%20Orthogonally%20Diagnolisable%20matrix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Orthogonally Diagnolizable matrix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linear%20Algebra/10%20Complex%20Matrices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Complex Matrices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hyper-plane" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hyper Plane
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partial-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partial Derivatives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gradients" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradients
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gradients">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linear-approximations-and-gradients" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linear Approximations and Gradients
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gradients-and-tangent-planes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradients and Tangent Planes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gradients-and-contours" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradients and Contours
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gradients and Contours">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proof
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directional-derivative" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directional Derivative
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cauchy-schwarz-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cauchy-Schwarz Inequality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cauchy-Schwarz Inequality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#points-to-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Points to Note
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#direction-of-steepest-ascent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Direction of steepest ascent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#direction-of-steepest-descent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Direction of steepest descent
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="multivariate-calculus">Multivariate Calculus</h1>
+<p>Let a function <span class="arithmatex">\(f\)</span> be defined as <span class="arithmatex">\(f:\R^d\to\R\)</span>. This will be used to reference each multivariate function described in this article.</p>
+<h2 id="lines">Lines</h2>
+<ul>
+<li>A line in <span class="arithmatex">\(\R^d\)</span> is a subset of <span class="arithmatex">\(\R^d\)</span></li>
+<li>A line through point <span class="arithmatex">\(u\in\R^d\)</span> along the vector <span class="arithmatex">\(x\in\R^d\)</span> is given by <span class="arithmatex">\(\{x\in\R^d: x= u +\alpha v, \alpha\in\R\}\)</span></li>
+<li>A line through two points <span class="arithmatex">\(u,u'\in\R^d\)</span> is given by <span class="arithmatex">\(\{x\in\R^d:x=u+\alpha(u-u'), \alpha\in\R\}\)</span></li>
+</ul>
+<h2 id="hyper-plane">Hyper Plane</h2>
+<ul>
+<li>A hyperplane of <span class="arithmatex">\(d-1\)</span> dimensions <span class="arithmatex">\(\subseteq R^d\)</span>.</li>
+<li>A hyperplane perpendicular to a vector <span class="arithmatex">\(w\in\R^d\)</span> with a value <span class="arithmatex">\(b\in\R\)</span> is given by <span class="arithmatex">\(\{x\in\R^d:w^Tx=b\} = \{x\in\R^d:\sum_{i=1}^dw_ix_i=b\}\)</span> </li>
+</ul>
+<h2 id="partial-derivatives">Partial Derivatives</h2>
+<p>The partial derivative of <span class="arithmatex">\(f\)</span> is defined as the derivative of <span class="arithmatex">\(f\)</span> with respect to one of the variables, keeping the other variables constant, i.e.,</p>
+<p>$$
+\cfrac{\partial f}{\partial x_i}(v) = lim_{\alpha\to{0}}\cfrac{f(v+\alpha e_i)-f(v)}{\alpha}
+$$
+Here <span class="arithmatex">\(e_i\)</span> is the <span class="arithmatex">\(i^{th}\)</span> unit vector in <span class="arithmatex">\(\R^d\)</span></p>
+<p>Let <span class="arithmatex">\(f:\R^d\to\R\)</span> and <span class="arithmatex">\(f=1x_1+2x_2+\dots nx_n\)</span></p>
+<p>Then the partial derivative of <span class="arithmatex">\(f\)</span> 
+- with respect to the variable <span class="arithmatex">\(x_1\)</span> is 
+$$
+\cfrac{\partial f}{\partial x_1} = 1
+$$
+- with respect to the variable <span class="arithmatex">\(x_2\)</span> is 
+$$
+\cfrac{\partial f}{\partial x_2} = 2
+\\ \\vdots
+$$
+and so on</p>
+<h2 id="gradients">Gradients</h2>
+<p>Let <span class="arithmatex">\(f:\R^d\to\R\)</span> be defined.</p>
+<p>Then <span class="arithmatex">\(\cfrac{\partial f}{\partial x} = \begin{bmatrix}\cfrac{\partial f}{\partial x_1},\cfrac{\partial f}{\partial x_2}, \cfrac{\partial f}{\partial x_3}, \cfrac{\partial f}{\partial x_4}, \cfrac{\partial f}{\partial x_5}, \dots, \cfrac{\partial f}{\partial x_d}, \end{bmatrix}\)</span></p>
+<p>Hence the gradient is equal to <span class="arithmatex">\([\cfrac{\partial f}{\partial x}]^T\)</span> , i.e.,
+$$
+\cfrac{\triangledown f}{\triangledown x} = \begin{bmatrix}
+\cfrac{\partial f}{\partial x_1}\\ \
+\cfrac{\partial f}{\partial x_2}\ \ \
+\vdots\\ \\
+\cfrac{\partial f}{\partial x_n}
+\end{bmatrix}
+$$</p>
+<h3 id="linear-approximations-and-gradients">Linear Approximations and Gradients</h3>
+<p>Let <span class="arithmatex">\(f\)</span> be a function defined from <span class="arithmatex">\(\R^d\to\R\)</span></p>
+<p>Then the linear approximation of <span class="arithmatex">\(f\)</span> at a vector <span class="arithmatex">\(v\in\R^d\)</span> is given by, </p>
+<div class="arithmatex">\[
+L_v[f](x)= f(x) = f(v) + \triangledown f(v)^T(x-v)
+\]</div>
+<h3 id="gradients-and-tangent-planes">Gradients and Tangent Planes</h3>
+<p>The graph of <span class="arithmatex">\(L_v[f]\)</span> is a plane that is tangent to the graph of <span class="arithmatex">\(f\)</span> at the point <span class="arithmatex">\((v, f(v))\)</span></p>
+<h3 id="gradients-and-contours">Gradients and Contours</h3>
+<p>The gradient of <span class="arithmatex">\(f\)</span> evaluated at <span class="arithmatex">\(v\)</span> is <span class="arithmatex">\(\perp\)</span> to the level set of <span class="arithmatex">\(f.\)</span> Mathematically,</p>
+<div class="arithmatex">\[
+\triangledown f(v) \perp \{x\in\R^d:f(x)=f(v)\}
+\]</div>
+<h4 id="proof">Proof</h4>
+<p>$$</p>
+<p>{x\in\R^d:f(x)=f(v)}\newline
+\ \newline
+\rightarrow{x\in\R^d:L_v<a href="x">f</a>=f(v)}\newline
+\ \newline
+\rightarrow{x\in\R^d:f(v)+\triangledown f(v)^T(x-v)=f(v)}\newline
+\ \newline</p>
+<p>\rightarrow  {x\in\R^d:\triangledown f(v)^Tx=\triangledown f(v)^Tv}\newline
+\ \newline
+\text{Comparing with } {x\in\R^d:W^Tx=b}, \text{where W is }\perp\text{to the plane}\newline\ \newline
+\therefore \triangledown f(v) \perp {x\in\R^d:L_v<a href="x">f</a>=f(v)}
+$$</p>
+<h2 id="directional-derivative">Directional Derivative</h2>
+<p>The directional derivative of the function <span class="arithmatex">\(f\)</span> at the point <span class="arithmatex">\(v\)</span> along the direction of <span class="arithmatex">\(u\)</span> is given by,</p>
+<div class="arithmatex">\[
+D_u[f](v) = lim_{\alpha\to 0} \cfrac{f(v+\alpha u)-f(v)}{\alpha}\newline\ \newline=lim_{\alpha\to 0} \cfrac{L_v[f](v)-f(v)}{\alpha}\newline\ \newline=lim_{\alpha\to 0} \cfrac{f(v)+\triangledown f(v)^T(\alpha u)-f(v)}{\alpha}\newline\ \newline=\triangledown f(v)^Tu
+\]</div>
+<h2 id="cauchy-schwarz-inequality">Cauchy-Schwarz Inequality</h2>
+<p>Let <span class="arithmatex">\(a,b\in\R^d\)</span>. Then the equality states that</p>
+<div class="arithmatex">\[
+-||a||.||b|| \leq a^Tb \leq ||a||.||b||
+\]</div>
+<h3 id="points-to-note">Points to Note</h3>
+<ol>
+<li><span class="arithmatex">\(-||a||.||b|| = a^Tb\)</span>, if and only if, <span class="arithmatex">\(a=\alpha b\)</span> and <span class="arithmatex">\(a&lt;0\)</span></li>
+<li><span class="arithmatex">\(||a||.||b|| = a^Tb\)</span>, if and only if, <span class="arithmatex">\(a=\alpha b\)</span> and <span class="arithmatex">\(a&gt;0\)</span></li>
+</ol>
+<h2 id="direction-of-steepest-ascent">Direction of steepest ascent</h2>
+<p>For a function <span class="arithmatex">\(f\)</span>, the direction of a unit vector <span class="arithmatex">\(u\)</span> such that it maximises the directional derivative of <span class="arithmatex">\(f\)</span> along <span class="arithmatex">\(u\)</span> is <span class="arithmatex">\(u=\triangledown f(v)\)</span>, i.e., for steepest ascent <span class="arithmatex">\(u\)</span> should be in direction of <span class="arithmatex">\(\triangledown f\)</span></p>
+<h2 id="direction-of-steepest-descent">Direction of steepest descent</h2>
+<p>For a function <span class="arithmatex">\(f\)</span>, the direction of a unit vector <span class="arithmatex">\(u\)</span> such that it minimises the directional derivative of <span class="arithmatex">\(f\)</span> along <span class="arithmatex">\(u\)</span> is <span class="arithmatex">\(u=-\triangledown f(v)\)</span>, i.e., for steepest descent <span class="arithmatex">\(u\)</span> should be in direction opposite to <span class="arithmatex">\(\triangledown f\)</span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../02%20Univariate%20Calculus/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Univariate Calculus">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Univariate Calculus
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04%20Complex%20Numbers/" class="md-footer__link md-footer__link--next" aria-label="Next: Complex Numbers">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Complex Numbers
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "content.code.copy", "content.code.select", "navigation.footer", "navigation.path"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
